@@ -1,10 +1,24 @@
 import { router } from './router/router.js';
 import { renderTabbar } from './components/tabbar.js';
+import { store } from './core/store.js';
+import { load, save } from './core/db.js';
+import { events } from './core/events.js';
+
+// ── Bootstrap ────────────────────────────────────────────────────────────────
+
+const state = load();
+store.init(state);
+
+// Persist every change automatically
+store.subscribeAll(() => {
+  save(store.getState());
+});
+
+// ── Views (lazy) ─────────────────────────────────────────────────────────────
 
 const appEl = document.getElementById('app');
 const contentEl = document.getElementById('view');
 
-// Views are loaded lazily to keep bootstrap fast
 async function mountView(importFn) {
   const mod = await importFn();
   contentEl.innerHTML = '';
