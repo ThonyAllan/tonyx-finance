@@ -27,10 +27,11 @@ async function mountView(importFn) {
 }
 
 router
-  .register('/dashboard', () => mountView(() => import('./views/dashboard.js')))
-  .register('/income',    () => mountView(() => import('./views/incomes.js')))
-  .register('/expenses',  () => mountView(() => import('./views/expenses.js')))
-  .register('/settings',  () => mountView(() => import('./views/settings.js')))
+  .register('/dashboard',   () => mountView(() => import('./views/dashboard.js')))
+  .register('/lancamentos', () => mountView(() => import('./views/lancamentos.js')))
+  .register('/income',      () => mountView(() => import('./views/incomes.js')))
+  .register('/expenses',    () => mountView(() => import('./views/expenses.js')))
+  .register('/settings',    () => mountView(() => import('./views/settings.js')))
   .start();
 
 renderTabbar(appEl);

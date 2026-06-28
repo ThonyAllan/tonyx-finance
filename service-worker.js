@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tonyx-v1';
+const CACHE_NAME = 'tonyx-v2';
 
 const APP_SHELL = [
   '/',
@@ -27,6 +27,7 @@ const APP_SHELL = [
   '/src/components/tabbar.js',
   '/src/components/modal.js',
   '/src/views/dashboard.js',
+  '/src/views/lancamentos.js',
   '/src/views/incomes.js',
   '/src/views/expenses.js',
   '/src/views/settings.js',

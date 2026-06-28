@@ -1,10 +1,9 @@
 import { router } from '../router/router.js';
 
 const TABS = [
-  { path: '/dashboard',  icon: '⌂',  label: 'Início' },
-  { path: '/income',     icon: '↕',  label: 'Lançamentos' },
-  { path: '/expenses',   icon: '💳', label: 'Despesas' },
-  { path: '/settings',   icon: '⚙',  label: 'Ajustes' },
+  { path: '/dashboard',    icon: '⌂',  label: 'Início' },
+  { path: '/lancamentos',  icon: '↕',  label: 'Lançamentos' },
+  { path: '/settings',     icon: '⚙',  label: 'Ajustes' },
 ];
 
 export function renderTabbar(container) {
@@ -30,9 +29,13 @@ export function renderTabbar(container) {
   container.appendChild(nav);
 
   function syncActive() {
-    const path = window.location.hash.replace(/^#/, '') || '/dashboard';
+    const hash = window.location.hash.replace(/^#/, '') || '/dashboard';
     nav.querySelectorAll('.tabbar__item').forEach(btn => {
-      btn.setAttribute('aria-selected', btn.dataset.path === path ? 'true' : 'false');
+      // Mark Lançamentos active for both /lancamentos, /income and /expenses
+      const tabPath = btn.dataset.path;
+      const isActive = tabPath === hash ||
+        (tabPath === '/lancamentos' && ['/lancamentos', '/income', '/expenses'].includes(hash));
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
     });
   }
 
