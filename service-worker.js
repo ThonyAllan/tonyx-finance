@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tonyx-v3';
+const CACHE_NAME = 'tonyx-v4';
 
 const APP_SHELL = [
   './',
