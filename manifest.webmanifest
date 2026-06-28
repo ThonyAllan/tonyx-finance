@@ -2,7 +2,8 @@
   "name": "Tonyx Finance",
   "short_name": "Tonyx",
   "description": "Sua situação financeira em 5 segundos.",
-  "start_url": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#F6F7FB",
@@ -10,19 +11,19 @@
   "lang": "pt-BR",
   "icons": [
     {
-      "src": "/assets/icons/tonyx-icon.png",
+      "src": "./assets/icons/tonyx-icon.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/assets/icons/tonyx-icon-1024.png",
+      "src": "./assets/icons/tonyx-icon-1024.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/assets/icons/tonyx-icon.svg",
+      "src": "./assets/icons/tonyx-icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"

@@ -20,7 +20,7 @@ function _paint() {
 
   _container.innerHTML = `
     <div class="wordmark-header">
-      <img src="/assets/icons/tonyx-wordmark.svg" alt="Tonyx Finance" />
+      <img src="./assets/icons/tonyx-wordmark.svg" alt="Tonyx Finance" />
     </div>
     <div style="padding: 0 var(--space-4)">
       <div class="month-nav">
