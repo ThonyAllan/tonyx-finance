@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280">
+<defs><linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#7361FF"/><stop offset="1" stop-color="#5745EC"/></linearGradient></defs>
+<rect x="20" y="20" width="240" height="240" rx="54" fill="url(#bg2)"/>
+<g transform="translate(20,20) scale(0.469)"><g transform="translate(0,0) scale(1)">
+<polygon points="84.2,349.5 300.8,224.5 315.8,250.5 99.2,375.5" fill="#F8F7FF"/>
+<polygon points="208.4,287.6 374.2,399.4 357.4,424.3 191.6,312.4" fill="#F8F7FF"/>
+<polygon points="196.0,279.2 220.8,296.0 296.3,184.0 271.4,167.3" fill="#F8F7FF"/>
+<line x1="103.3" y1="338.5" x2="108.8" y2="348.0" stroke="#5745EC" stroke-width="5"/>
+<line x1="122.4" y1="327.5" x2="127.9" y2="337.0" stroke="#5745EC" stroke-width="5"/>
+<line x1="141.4" y1="316.5" x2="146.9" y2="326.0" stroke="#5745EC" stroke-width="5"/>
+<line x1="160.5" y1="305.5" x2="166.0" y2="315.0" stroke="#5745EC" stroke-width="5"/>
+<line x1="179.5" y1="294.5" x2="185.0" y2="304.0" stroke="#5745EC" stroke-width="5"/>
+<line x1="198.6" y1="283.5" x2="204.1" y2="293.0" stroke="#5745EC" stroke-width="5"/>
+<line x1="217.6" y1="272.5" x2="223.1" y2="282.0" stroke="#5745EC" stroke-width="5"/>
+<line x1="236.7" y1="261.5" x2="242.2" y2="271.0" stroke="#5745EC" stroke-width="5"/>
+<line x1="255.7" y1="250.5" x2="261.2" y2="260.0" stroke="#5745EC" stroke-width="5"/>
+<line x1="274.8" y1="239.5" x2="280.3" y2="249.0" stroke="#5745EC" stroke-width="5"/>
+<polygon points="130.0,105.0 270.0,105.0 270.0,131.0 130.0,131.0" fill="#F8F7FF"/>
+<polygon points="187.0,118.0 213.0,118.0 213.0,210.0 187.0,210.0" fill="#F8F7FF"/>
+<polygon points="402.0,155.0 406.9,168.2 421.0,168.8 410.0,177.6 413.8,191.2 402.0,183.4 390.2,191.2 394.0,177.6 383.0,168.8 397.1,168.2" fill="#F5C451"/>
+<polygon points="402.0,240.0 406.9,253.2 421.0,253.8 410.0,262.6 413.8,276.2 402.0,268.4 390.2,276.2 394.0,262.6 383.0,253.8 397.1,253.2" fill="#F5C451"/>
+<polygon points="402.0,325.0 406.9,338.2 421.0,338.8 410.0,347.6 413.8,361.2 402.0,353.4 390.2,361.2 394.0,347.6 383.0,338.8 397.1,338.2" fill="#F5C451"/>
+</g></g>
+<text x="300" y="150" font-family="-apple-system, SF Pro Display, Segoe UI, Roboto, system-ui, sans-serif" font-size="86" font-weight="700" fill="#14161D">Tonyx</text>
+<text x="300" y="220" font-family="-apple-system, SF Pro Display, Segoe UI, Roboto, system-ui, sans-serif" font-size="56" font-weight="500" fill="#71757F">Finance</text>
+</svg>
