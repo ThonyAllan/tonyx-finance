@@ -1,0 +1,53 @@
+/* Design tokens — Tonyx Finance. All values live here; never use raw values elsewhere. */
+:root {
+  /* Brand */
+  --brand: #6D5BFF;
+  --brand-soft: #EEEBFF;
+
+  /* Money (never used for brand/UI chrome) */
+  --income: #1FB87A;
+  --expense: #F0445A;
+  --warning: #F5A623;
+
+  /* Typography scale */
+  --font-hero: 52px;
+  --font-title: 24px;
+  --font-body: 16px;
+  --font-caption: 13px;
+  --font-label: 11px;
+
+  /* Border radii */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-full: 999px;
+
+  /* Spacing (4px base grid) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  /* Shadows */
+  --shadow-1: 0 1px 4px rgba(0,0,0,.08), 0 0 0 .5px rgba(0,0,0,.04);
+  --shadow-2: 0 4px 16px rgba(0,0,0,.10), 0 0 0 .5px rgba(0,0,0,.04);
+
+  /* Tab bar height + safe-area compensation */
+  --tabbar-height: 56px;
+  --tabbar-total: calc(var(--tabbar-height) + env(safe-area-inset-bottom));
+
+  /* Z-indices */
+  --z-tabbar: 100;
+  --z-fab: 110;
+  --z-modal: 200;
+  --z-backdrop: 190;
+
+  /* Transition */
+  --ease-spring: cubic-bezier(.34,1.56,.64,1);
+  --ease-out: cubic-bezier(.2,.8,.2,1);
+  --duration-fast: 180ms;
+  --duration-normal: 280ms;
+}

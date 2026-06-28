@@ -1,0 +1,103 @@
+/* Reset + base typography */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: -apple-system, "SF Pro Text", system-ui, sans-serif;
+  font-size: var(--font-body);
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+  /* Safe areas */
+  padding-top: env(safe-area-inset-top);
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+/* Tabbable areas minimum 44px */
+button, [role="button"], a, input, select, textarea {
+  min-height: 44px;
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+input, select, textarea {
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: var(--font-body);
+  outline: none;
+  width: 100%;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--brand);
+}
+
+/* Numeric values — tabular nums, strong weight */
+.numeric {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  letter-spacing: -0.02em;
+}
+
+/* Hero balance number */
+.hero-amount {
+  font-size: var(--font-hero);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+}
+
+/* Main content area — padded for tab bar */
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.view {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4);
+  padding-bottom: calc(var(--tabbar-total) + var(--space-8));
+}
+
+/* Headings */
+h1 { font-size: var(--font-title); font-weight: 700; }
+h2 { font-size: 20px; font-weight: 600; }
+h3 { font-size: var(--font-body); font-weight: 600; }
+
+.text-muted { color: var(--muted); font-size: var(--font-caption); }
+
+/* Utility */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); border: 0;
+}

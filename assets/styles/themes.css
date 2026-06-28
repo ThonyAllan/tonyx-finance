@@ -1,0 +1,32 @@
+/* Light theme (default) */
+:root,
+[data-theme="light"] {
+  --ink: #14161D;
+  --muted: #71757F;
+  --bg: #F6F7FB;
+  --surface: #FFFFFF;
+  --hairline: #E6E8EF;
+  --brand-soft: #EEEBFF;
+}
+
+/* Dark theme via system preference */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #F3F4F8;
+    --muted: #9AA0AC;
+    --bg: #0E0F14;
+    --surface: #1A1C24;
+    --hairline: rgba(255,255,255,.08);
+    --brand-soft: rgba(109,91,255,.16);
+  }
+}
+
+/* Dark theme via manual override */
+[data-theme="dark"] {
+  --ink: #F3F4F8;
+  --muted: #9AA0AC;
+  --bg: #0E0F14;
+  --surface: #1A1C24;
+  --hairline: rgba(255,255,255,.08);
+  --brand-soft: rgba(109,91,255,.16);
+}
