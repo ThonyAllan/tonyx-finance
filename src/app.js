@@ -2,12 +2,13 @@ import { router } from './router/router.js';
 import { renderTabbar } from './components/tabbar.js';
 import { store } from './core/store.js';
 import { load, save } from './core/db.js';
-import { events } from './core/events.js';
+import { seedDefaults } from './models/categories.js';
 
 // ── Bootstrap ────────────────────────────────────────────────────────────────
 
 const state = load();
 store.init(state);
+seedDefaults();
 
 // Persist every change automatically
 store.subscribeAll(() => {
