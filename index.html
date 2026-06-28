@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Sua situação financeira em 5 segundos." />
+
+  <!-- PWA / iOS -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Tonyx Finance" />
+  <meta name="theme-color" content="#6D5BFF" />
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="/assets/icons/tonyx-icon.png" />
+  <link rel="icon" href="/assets/icons/tonyx-icon.svg" type="image/svg+xml" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/styles/tokens.css" />
+  <link rel="stylesheet" href="/assets/styles/themes.css" />
+  <link rel="stylesheet" href="/assets/styles/base.css" />
+  <link rel="stylesheet" href="/assets/styles/components.css" />
+
+  <title>Tonyx Finance</title>
+</head>
+<body>
+  <div id="app">
+    <main id="view" class="view"></main>
+    <!-- Tab bar is injected by tabbar.js -->
+  </div>
+
+  <script type="module" src="/src/app.js"></script>
+  <script>
+    // Apply saved theme before first paint to avoid flash
+    (function () {
+      try {
+        const data = JSON.parse(localStorage.getItem('afp:data') || '{}');
+        const t = data.settings?.theme;
+        if (t && t !== 'system') document.documentElement.dataset.theme = t;
+      } catch (_) {}
+    })();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
