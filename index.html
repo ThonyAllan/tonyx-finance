@@ -12,15 +12,15 @@
   <meta name="apple-mobile-web-app-title" content="Tonyx Finance" />
   <meta name="theme-color" content="#6D5BFF" />
 
-  <link rel="manifest" href="./manifest.webmanifest" />
-  <link rel="apple-touch-icon" href="./assets/icons/tonyx-icon.png" />
-  <link rel="icon" href="./assets/icons/tonyx-icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icons/tonyx-icon.png" />
+  <link rel="icon" href="assets/icons/tonyx-icon.svg" type="image/svg+xml" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="./assets/styles/tokens.css" />
-  <link rel="stylesheet" href="./assets/styles/themes.css" />
-  <link rel="stylesheet" href="./assets/styles/base.css" />
-  <link rel="stylesheet" href="./assets/styles/components.css" />
+  <link rel="stylesheet" href="assets/styles/tokens.css" />
+  <link rel="stylesheet" href="assets/styles/themes.css" />
+  <link rel="stylesheet" href="assets/styles/base.css" />
+  <link rel="stylesheet" href="assets/styles/components.css" />
 
   <title>Tonyx Finance</title>
 </head>
@@ -30,7 +30,7 @@
     <!-- Tab bar is injected by tabbar.js -->
   </div>
 
-  <script type="module" src="./src/app.js"></script>
+  <script type="module" src="src/app.js"></script>
   <script>
     // Apply saved theme before first paint to avoid flash
     (function () {
@@ -44,7 +44,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js', { scope: './' }).catch(() => {});
+        navigator.serviceWorker.register('service-worker.js', { scope: './' }).catch(() => {});
       });
     }
   </script>
